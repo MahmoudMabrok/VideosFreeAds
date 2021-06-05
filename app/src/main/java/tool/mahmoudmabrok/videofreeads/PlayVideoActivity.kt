@@ -23,8 +23,10 @@ class PlayVideoActivity : AppCompatActivity() {
         binding.youtubePlayer.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
             override fun onReady(youTubePlayer: YouTubePlayer) {
                 youTubePlayer.loadVideo(url, 0F)
+                binding.youtubePlayer.enterFullScreen()
             }
         })
+
 
     }
 
